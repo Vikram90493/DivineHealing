@@ -375,12 +375,19 @@
             font-size: 2.1rem;
             color: var(--primary);
             margin-bottom: 0.6rem;
+            line-height: 1.25;
         }
 
         .section-title p {
             color: #666;
             font-size: 0.98rem;
             font-family: 'Avenir', sans-serif;
+        }
+
+        /* Extra guarantee that these two sections match exactly */
+        .why-choose .section-title h2,
+        .therapist .section-title h2 {
+            color: var(--primary);
         }
 
         /* About Section */
@@ -492,6 +499,9 @@
         .service-card:nth-child(6) { animation-delay: 0.3s; }
         .service-card:nth-child(7) { animation-delay: 0.35s; }
         .service-card:nth-child(8) { animation-delay: 0.4s; }
+        .service-card:nth-child(9) { animation-delay: 0.45s; }
+        .service-card:nth-child(10) { animation-delay: 0.5s; }
+        .service-card:nth-child(11) { animation-delay: 0.55s; }
 
         @keyframes scaleIn {
             from {
@@ -557,7 +567,10 @@
             margin-top: 0.3rem;
             color: var(--primary);
             font-weight: 600;
-            text-decoration: none;
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
         }
 
         .service-cta:hover {
@@ -663,7 +676,7 @@
             display: grid;
             grid-template-columns: 1.1fr 1fr;
             gap: 2.2rem;
-            align-items: center;
+            align-items:center;
         }
 
         .steps-list {
@@ -704,15 +717,6 @@
             line-height: 1.6;
             font-family: 'Avenir', sans-serif;
             margin-bottom: 1rem;
-        }
-
-        .steps-side .btn {
-            background: white;
-            color: var(--primary);
-        }
-
-        .steps-side .btn:hover {
-            transform: translateY(-3px);
         }
 
         /* Booking Form Section */
@@ -847,6 +851,18 @@
             justify-content: center;
         }
 
+        .form-success {
+            margin-top: 0.9rem;
+            padding: 0.7rem 0.9rem;
+            border-radius: 10px;
+            background: #e8f8ef;
+            border: 1px solid #2ecc71;
+            font-size: 0.9rem;
+            color: #216a3c;
+            font-family: 'Avenir', sans-serif;
+            display: none;
+        }
+
         /* Offers Section */
         .offers {
             padding: 4rem 5%;
@@ -875,6 +891,28 @@
             border: 1px solid rgba(255, 255, 255, 0.7);
             font-size: 0.86rem;
             margin-bottom: 0.8rem;
+        }
+
+        .cta-button {
+            background: white;
+            color: var(--primary);
+            padding: 0.95rem 2.6rem;
+            border-radius: 999px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 42px rgba(0, 0, 0, 0.3);
         }
 
         /* Therapist Section */
@@ -942,7 +980,7 @@
             justify-content: center;
         }
 
-        /* Final CTA Section */
+        /* Final CTA */
         .cta-section {
             padding: 4.5rem 5%;
             background: linear-gradient(135deg, var(--primary), var(--accent));
@@ -988,28 +1026,6 @@
             margin-bottom: 1.7rem;
             opacity: 0.96;
             font-family: 'Avenir', sans-serif;
-        }
-
-        .cta-button {
-            background: white;
-            color: var(--primary);
-            padding: 0.95rem 2.6rem;
-            border-radius: 999px;
-            font-size: 1rem;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 42px rgba(0, 0, 0, 0.3);
         }
 
         .cta-sub {
@@ -1124,7 +1140,7 @@
         </ul>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-text">
@@ -1144,12 +1160,9 @@
                     Specialized care available for paralytic patients — home/clinic visits possible.
                 </p>
                 <div class="cta-buttons">
-                    <a href="https://wa.me/91YOURNUMBER?text=Hi%20I%20want%20to%20book%20a%20therapy%20session" target="_blank" class="btn btn-primary">
+                    <button type="button" class="btn btn-primary" onclick="scrollToBooking()">
                         💬 Book a Therapy Session
-                    </a>
-                    <a href="#booking" class="btn btn-secondary">
-                        📝 Fill Booking Form
-                    </a>
+                    </button>
                 </div>
                 <p class="hero-location">
                     📍 First time in Porwal Road, Dhanori, Lohegaon!
@@ -1174,7 +1187,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section class="about" id="about">
         <div class="section-title">
             <h2>Holistic Healing for Pain Relief &amp; Body Alignment</h2>
@@ -1219,7 +1232,7 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services -->
     <section class="services" id="services">
         <div class="section-title">
             <h2>Our Services</h2>
@@ -1239,9 +1252,9 @@
                     <li>Improves blood circulation &amp; energy flow</li>
                     <li>Enhances flexibility &amp; reduces fatigue</li>
                 </ul>
-                <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20book%20an%20Acupressure%20therapy%20session" target="_blank" class="service-cta">
+                <button type="button" class="service-cta" onclick="scrollToBooking()">
                     💬 Book Acupressure Session
-                </a>
+                </button>
             </div>
 
             <!-- 2. Bone Alignment -->
@@ -1257,9 +1270,9 @@
                     <li>Reduces chronic back, neck &amp; joint pain</li>
                     <li>Improves mobility &amp; balance naturally</li>
                 </ul>
-                <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20book%20a%20Bone%20Alignment%20session" target="_blank" class="service-cta">
+                <button type="button" class="service-cta" onclick="scrollToBooking()">
                     💬 Book Bone Alignment Session
-                </a>
+                </button>
             </div>
 
             <!-- 3. Physio & Rehab -->
@@ -1276,9 +1289,9 @@
                     <li>Improves mobility &amp; daily functioning</li>
                     <li>Supports paralytic patients with home/clinic visits</li>
                 </ul>
-                <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20book%20a%20Physiotherapy%20Rehab%20session" target="_blank" class="service-cta">
+                <button type="button" class="service-cta" onclick="scrollToBooking()">
                     💬 Book Physio-Rehab Session
-                </a>
+                </button>
             </div>
 
             <!-- 4. Auricular -->
@@ -1294,9 +1307,9 @@
                     <li>Promotes relaxation &amp; mental clarity</li>
                     <li>Helps with musculoskeletal discomfort, including sciatica</li>
                 </ul>
-                <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20book%20Auricular%20Therapy" target="_blank" class="service-cta">
+                <button type="button" class="service-cta" onclick="scrollToBooking()">
                     💬 Book Auricular Therapy
-                </a>
+                </button>
             </div>
 
             <!-- 5. Magnetic -->
@@ -1312,9 +1325,9 @@
                     <li>Improves circulation &amp; oxygen flow</li>
                     <li>Boosts the body’s natural healing process</li>
                 </ul>
-                <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20book%20Magnetic%20Therapy" target="_blank" class="service-cta">
+                <button type="button" class="service-cta" onclick="scrollToBooking()">
                     💬 Book Magnetic Therapy
-                </a>
+                </button>
             </div>
 
             <!-- 6. Sujog -->
@@ -1330,9 +1343,9 @@
                     <li>Reduces pain &amp; muscle tension</li>
                     <li>Enhances flexibility &amp; joint mobility</li>
                 </ul>
-                <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20book%20Sujog%20Therapy" target="_blank" class="service-cta">
+                <button type="button" class="service-cta" onclick="scrollToBooking()">
                     💬 Book Sujog Therapy
-                </a>
+                </button>
             </div>
 
             <!-- 7. Nadi Parikshan -->
@@ -1348,9 +1361,9 @@
                     <li>Helps create a customized healing plan</li>
                     <li>Supports preventive wellness naturally</li>
                 </ul>
-                <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20book%20a%20Nadi%20Parikshan%20session" target="_blank" class="service-cta">
+                <button type="button" class="service-cta" onclick="scrollToBooking()">
                     💬 Book Nadi Parikshan Session
-                </a>
+                </button>
             </div>
 
             <!-- 8. Dry Cupping -->
@@ -1366,9 +1379,66 @@
                     <li>Detoxifies the body &amp; improves circulation</li>
                     <li>Enhances energy flow &amp; relaxation</li>
                 </ul>
-                <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20book%20Dry%20Cupping%20Therapy" target="_blank" class="service-cta">
+                <button type="button" class="service-cta" onclick="scrollToBooking()">
                     💬 Book Dry Cupping Therapy
-                </a>
+                </button>
+            </div>
+
+            <!-- 9. Kinesiology Therapy -->
+            <div class="service-card">
+                <div class="service-icon">🦵</div>
+                <h3>Kinesiology Therapy</h3>
+                <p class="service-tag">
+                    Ideal For: Mobility issues, chronic tightness, emotional stress, balance &amp; posture problems
+                </p>
+                <p><strong>Benefits:</strong></p>
+                <ul class="service-list">
+                    <li>Identifies hidden causes of pain</li>
+                    <li>Corrects muscle activation patterns</li>
+                    <li>Aligns emotional &amp; physical energy</li>
+                    <li>Improves movement &amp; flexibility</li>
+                </ul>
+                <button type="button" class="service-cta" onclick="scrollToBooking()">
+                    💬 Book Kinesiology Session
+                </button>
+            </div>
+
+            <!-- 10. Leech Therapy -->
+            <div class="service-card">
+                <div class="service-icon">🩸</div>
+                <h3>Leech Therapy (Jalaukavacharan)</h3>
+                <p class="service-tag">
+                    Ideal For: Varicose veins, arthritis &amp; joint inflammation, diabetic wounds, sciatica &amp; swelling
+                </p>
+                <p><strong>Benefits:</strong></p>
+                <ul class="service-list">
+                    <li>Removes toxins &amp; infected blood</li>
+                    <li>Reduces pain &amp; inflammation</li>
+                    <li>Improves microcirculation</li>
+                    <li>Helps speed up tissue healing</li>
+                </ul>
+                <button type="button" class="service-cta" onclick="scrollToBooking()">
+                    💬 Book Leech Therapy
+                </button>
+            </div>
+
+            <!-- 11. Agni Karma Therapy -->
+            <div class="service-card">
+                <div class="service-icon">♨️</div>
+                <h3>Agni Karma Therapy (Thermal Healing)</h3>
+                <p class="service-tag">
+                    Ideal For: Frozen shoulder, knee pain, tennis elbow, plantar fasciitis
+                </p>
+                <p><strong>Benefits:</strong></p>
+                <ul class="service-list">
+                    <li>Quick pain reduction</li>
+                    <li>Opens blocked energy channels</li>
+                    <li>Reduces stiffness in targeted areas</li>
+                    <li>Supports long-lasting pain relief</li>
+                </ul>
+                <button type="button" class="service-cta" onclick="scrollToBooking()">
+                    💬 Book Agni Karma Session
+                </button>
             </div>
         </div>
     </section>
@@ -1453,38 +1523,38 @@
         </p>
     </section>
 
-    <!-- Steps / How to Book -->
+    <!-- Steps -->
     <section class="steps" id="steps">
         <div class="section-title">
             <h2>How to Book a Session</h2>
-            <p>Simple WhatsApp-based booking — no app, no forms, just direct human support.</p>
+            <p>Simple booking process — no app, no long waiting, just quick confirmation.</p>
         </div>
         <div class="steps-grid">
             <ul class="steps-list">
-                <li>Step 1 — Click on the WhatsApp button.</li>
-                <li>Step 2 — Select your therapy (Acupressure / Bone Alignment / Cupping / etc.).</li>
+                <li>Step 1 — Scroll to the booking form below.</li>
+                <li>Step 2 — Select your therapy or choose “Need guidance”.</li>
                 <li>Step 3 — Share your pain, symptoms or medical reports (if available).</li>
-                <li>Step 4 — Get a personalized treatment plan &amp; session recommendation.</li>
+                <li>Step 4 — We confirm a customized treatment plan &amp; session timing.</li>
                 <li>Step 5 — Start your natural healing journey with scheduled sessions.</li>
             </ul>
             <div class="steps-side">
-                <h3>Book in 30 Seconds on WhatsApp</h3>
+                <h3>Book Your Session in 1 Minute</h3>
                 <p>
-                    No long forms. No waiting. Just tap the button, send your details and we’ll guide you on
-                    the best therapy for your condition, timing and number of sittings required.
+                    Just fill your name, number, pain details and preferred time. We will get in touch to guide you
+                    on the best therapy for your condition and confirm your appointment.
                 </p>
-                <a href="https://wa.me/91YOURNUMBER?text=Hi%20I%20want%20to%20book%20a%20healing%20session" target="_blank" class="btn">
-                    💬 Book Your Healing Session Now
-                </a>
+                <button type="button" class="btn" onclick="scrollToBooking()">
+                    📝 Go to Booking Form
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- Booking Form Section -->
+    <!-- Booking Form -->
     <section class="booking" id="booking">
         <div class="section-title">
             <h2>Book Your Session Online</h2>
-            <p>Fill this quick form and we’ll confirm your appointment on WhatsApp.</p>
+            <p>Fill this quick form and we’ll get back to you with confirmation.</p>
         </div>
         <div class="booking-grid">
             <div class="booking-info">
@@ -1493,8 +1563,8 @@
                     the best treatment plan for your condition and book your slot accordingly.
                 </p>
                 <ul class="booking-points">
-                    <li>⏱ Quick response on WhatsApp after you submit</li>
-                    <li>🧾 You can share reports, X-rays or MRI later on chat</li>
+                    <li>⏱ Quick response after you submit</li>
+                    <li>🧾 You can share reports, X-rays or MRI later if needed</li>
                     <li>🏠 Home / clinic visit options for eligible patients</li>
                     <li>👨‍⚕️ Sessions personally handled by therapist Sarvesh</li>
                 </ul>
@@ -1504,7 +1574,7 @@
             </div>
             <div class="booking-form-card">
                 <div class="booking-form-title">Fill Your Details</div>
-                <div class="booking-form-sub">We’ll reach out on WhatsApp to confirm date &amp; time.</div>
+                <div class="booking-form-sub">We’ll reach out to confirm date &amp; time.</div>
                 <form class="booking-form" id="bookingForm">
                     <div class="form-row">
                         <div class="form-group">
@@ -1512,7 +1582,7 @@
                             <input type="text" id="name" name="name" placeholder="Enter your name" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">WhatsApp Number *</label>
+                            <label for="phone">Mobile Number *</label>
                             <input type="tel" id="phone" name="phone" placeholder="e.g. 9876543210" required>
                         </div>
                     </div>
@@ -1533,6 +1603,9 @@
                                 <option>Sujog Therapy</option>
                                 <option>Nadi Parikshan</option>
                                 <option>Dry Cupping Therapy</option>
+                                <option>Kinesiology Therapy</option>
+                                <option>Leech Therapy (Jalaukavacharan)</option>
+                                <option>Agni Karma Therapy (Thermal Healing)</option>
                                 <option>Not sure – need guidance</option>
                             </select>
                         </div>
@@ -1541,19 +1614,19 @@
                         <label for="message">Describe Your Pain / Condition *</label>
                         <textarea id="message" name="message" placeholder="Since when, which side, any diagnosis, etc." required></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="preferredTime">Preferred Day &amp; Time</label>
-                        <input type="text" id="preferredTime" name="preferredTime" placeholder="e.g. Evening after 6 PM, Weekend only">
-                    </div>
+                    
                     <div class="form-check">
                         <input type="checkbox" id="consent" required>
                         <label for="consent">
-                            I agree to be contacted on WhatsApp / phone for appointment confirmation and follow-ups.
+                            I agree to be contacted for appointment confirmation and follow-ups.
                         </label>
                     </div>
                     <button type="submit" class="btn btn-primary">
-                        🚀 Submit &amp; Send on WhatsApp
+                        🚀 Submit Booking Request
                     </button>
+                    <div id="formSuccess" class="form-success">
+                        ✅ Thank you! Your request has been submitted. We’ll contact you shortly to confirm your appointment.
+                    </div>
                 </form>
             </div>
         </div>
@@ -1569,9 +1642,9 @@
             Get a <strong>Free Consultation</strong> + <strong>10% OFF</strong> on any therapy session when you
             book your first package with Divine Healing.
         </p>
-        <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20know%20about%20combo%20packages%20and%20offers" target="_blank" class="cta-button">
-            💬 Claim Your Offer on WhatsApp
-        </a>
+        <button type="button" class="cta-button" onclick="scrollToBooking()">
+            💬 View Packages & Book
+        </button>
     </section>
 
     <!-- Therapist -->
@@ -1595,6 +1668,9 @@
                     <li>Sujog Therapy</li>
                     <li>Nadi Parikshan (Pulse Diagnosis)</li>
                     <li>Dry Cupping (Fire, Ice, Water)</li>
+                    <li>Kinesiology Therapy</li>
+                    <li>Leech Therapy (Jalaukavacharan)</li>
+                    <li>Agni Karma Therapy (Thermal Healing)</li>
                 </ul>
                 <p>
                     Every session is focused on your specific condition — not a generic routine. From pain mapping
@@ -1613,9 +1689,9 @@
                 <div class="therapist-tag">
                     100% Natural • Non-Invasive • Result-Oriented
                 </div>
-                <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20book%20a%20session%20with%20Sarvesh" target="_blank" class="btn btn-primary">
+                <button type="button" class="btn btn-primary" onclick="scrollToBooking()">
                     💬 Book Your Session with Sarvesh
-                </a>
+                </button>
             </div>
         </div>
     </section>
@@ -1628,9 +1704,9 @@
                 Don’t wait for the pain to become “normal”. Take the first step towards a pain-free, active life today.
                 Natural, non-surgical and result-focused therapies are now available near you.
             </p>
-            <a href="https://wa.me/91YOURNUMBER?text=Hi%20I%20want%20to%20book%20a%20Divine%20Healing%20session" target="_blank" class="cta-button">
-                💬 Book a Divine Healing Session on WhatsApp
-            </a>
+            <button type="button" class="cta-button" onclick="scrollToBooking()">
+                💬 Book a Divine Healing Session
+            </button>
             <div class="cta-sub">
                 📍 In-person appointments now available at <strong>Porwal Road, Dhanori, Lohegaon</strong>
             </div>
@@ -1663,7 +1739,7 @@
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p>WhatsApp: <a href="https://wa.me/91YOURNUMBER" target="_blank">Chat on WhatsApp</a></p>
+                <p>Phone: 0000-000-000 (update)</p>
                 <p>Email: info@divinehealingholistic.com</p>
                 <p>Timings: 10:00 AM – 8:00 PM (By Appointment)</p>
             </div>
@@ -1674,6 +1750,14 @@
     </footer>
 
     <script>
+        // Smooth scroll helper
+        function scrollToBooking() {
+            const section = document.getElementById('booking');
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1712,33 +1796,17 @@
             observer.observe(el);
         });
 
-        // Booking form -> WhatsApp redirect
+        // Booking form: show thank-you message
         const bookingForm = document.getElementById('bookingForm');
+        const formSuccess = document.getElementById('formSuccess');
+
         if (bookingForm) {
             bookingForm.addEventListener('submit', function (e) {
                 e.preventDefault();
-                const name = document.getElementById('name').value.trim();
-                const phone = document.getElementById('phone').value.trim();
-                const painArea = document.getElementById('painArea').value.trim();
-                const therapy = document.getElementById('therapy').value;
-                const message = document.getElementById('message').value.trim();
-                const preferredTime = document.getElementById('preferredTime').value.trim();
-
-                const line1 = `New Booking Request - Website`;
-                const line2 = `Name: ${name}`;
-                const line3 = `WhatsApp Number: ${phone}`;
-                const line4 = `Primary Pain Area: ${painArea}`;
-                const line5 = `Preferred Therapy: ${therapy || 'Not specified'}`;
-                const line6 = `Condition Details: ${message}`;
-                const line7 = `Preferred Day/Time: ${preferredTime || 'Not specified'}`;
-
-                const fullMessage = [line1, '', line2, line3, line4, line5, line6, line7].join('\n');
-
-                // Replace with your full WhatsApp number including country code (no +)
-                const clinicNumber = '91YOURNUMBER';
-                const url = `https://wa.me/${clinicNumber}?text=${encodeURIComponent(fullMessage)}`;
-
-                window.open(url, '_blank');
+                if (formSuccess) {
+                    formSuccess.style.display = 'block';
+                }
+                bookingForm.reset();
             });
         }
     </script>

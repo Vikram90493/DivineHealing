@@ -79,6 +79,18 @@
             font-size: 1.4rem;
             animation: pulse 2.2s ease-in-out infinite;
         }
+        .logo-img {
+    height: 150px;                 /* adjust if needed (35–60px works best) */
+    width: auto;
+    object-fit: contain;
+}
+
+.logo span {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
 
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
@@ -1168,10 +1180,11 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <a href="#home" class="logo">
-            <div class="logo-icon">✨</div>
-            Divine Healing Holistic
-        </a>
+       <a href="#home" class="logo">
+    <img src="logo.png" alt="Divine Healing Logo" class="logo-img">
+    <span>Divine Healing Holistic Wellness Center</span>
+</a>
+
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -1414,7 +1427,7 @@
         <div class="service-card">
             <img src="Leech .png" alt="Leech therapy for arthritis and diabetic wound healing" class="service-image">
             <h3>Leech Therapy (Jalaukavacharan)</h3>
-            <p class="service-tag">Ideal For: Varicose veins, inflammation, diabetic wounds</p>
+            <p class="service-tag">Ideal For: Varicose veins, inflammation, chronic pain relief</p>
             <p><strong>Benefits:</strong></p>
             <ul class="service-list">
                 <li>Removes toxins & bad blood</li>

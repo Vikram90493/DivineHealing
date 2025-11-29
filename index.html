@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divine Healing Holistic Wellness Centre - Natural Pain Relief & Body Alignment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Avenir:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1366B9;
+            --primary-soft: #f0f7ff;
+            --accent: #4A90E2;
+            --dark: #0a1e3a;
+            --text-main: #333;
+            --text-soft: #555;
+            --radius-lg: 24px;
+            --shadow-soft: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #ffffff;
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1.1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 18px rgba(19, 102, 185, 0.12);
+            animation: slideDown 0.6s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.4rem;
+            animation: pulse 2.2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.06); }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 5% 4rem;
+            background: radial-gradient(circle at top left, #eef5ff 0, #ffffff 55%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -20%;
+            width: 780px;
+            height: 780px;
+            background: radial-gradient(circle, rgba(19, 102, 185, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 22s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 620px;
+            height: 620px;
+            background: radial-gradient(circle, rgba(74, 144, 226, 0.07) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 18s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 3.5rem;
+            max-width: 1250px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text {
+            animation: fadeInLeft 0.9s ease-out;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 0.9rem;
+            border-radius: 999px;
+            background: rgba(19,102,185,0.06);
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.7rem;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.1rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            line-height: 1.15;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-text .highlight {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        .hero-text p {
+            font-size: 1rem;
+            color: var(--text-soft);
+            margin-bottom: 1.1rem;
+            line-height: 1.75;
+            font-family: 'Avenir', sans-serif;
+        }
+
+        .hero-note {
+            font-size: 0.95rem;
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 1.7rem;
+        }
+
+        .hero-location {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.7rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 0.9rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 999px;
+            font-size: 0.98rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Poppins', sans-serif;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            box-shadow: 0 10px 28px rgba(19, 102, 185, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 40px rgba(19, 102, 185, 0.45);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 1.5px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            position: relative;
+            animation: fadeInRight 0.9s ease-out;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .floating-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 2.2rem;
+            box-shadow: 0 20px 60px rgba(19, 102, 185, 0.15);
+            position: relative;
+            animation: floatCard 7s ease-in-out infinite;
+            border: 1px solid rgba(19,102,185,0.08);
+        }
+
+        @keyframes floatCard {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-14px); }
+        }
+
+        .card-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.9rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 0.7rem;
+            font-weight: 600;
+        }
+
+        .card-text {
+            color: #666;
+            line-height: 1.7;
+            font-family: 'Avenir', sans-serif;
+            font-size: 0.95rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .card-list {
+            margin-top: 0.6rem;
+            padding-left: 1.1rem;
+            color: #444;
+            font-size: 0.92rem;
+        }
+
+        /* General Sections */
+        section {
+            scroll-margin-top: 90px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.8rem;
+            animation: fadeInUp 0.7s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.1rem;
+            color: var(--primary);
+            margin-bottom: 0.6rem;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 0.98rem;
+            font-family: 'Avenir', sans-serif;
+        }
+
+        /* About Section */
+        .about {
+            padding: 4.5rem 5% 3.8rem;
+            background: #ffffff;
+        }
+
+        .about-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 2.4rem;
+            align-items: flex-start;
+        }
+
+        .about-text p {
+            color: var(--text-soft);
+            line-height: 1.8;
+            font-family: 'Avenir', sans-serif;
+            margin-bottom: 0.9rem;
+            font-size: 0.96rem;
+        }
+
+        .about-list {
+            margin-top: 0.8rem;
+            padding-left: 1.2rem;
+        }
+
+        .about-list li {
+            margin-bottom: 0.4rem;
+            color: #444;
+            font-size: 0.94rem;
+        }
+
+        .about-highlight {
+            margin-top: 1rem;
+            padding: 0.9rem 1.1rem;
+            border-radius: 16px;
+            background: rgba(19, 102, 185, 0.04);
+            border: 1px dashed rgba(19, 102, 185, 0.3);
+            font-size: 0.92rem;
+            color: var(--primary);
+        }
+
+        .about-badge {
+            display: inline-block;
+            margin-top: 0.7rem;
+            font-size: 0.84rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 999px;
+            background: #eaf3ff;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .about-card {
+            background: var(--primary-soft);
+            border-radius: 18px;
+            padding: 1.6rem 1.7rem;
+            border: 1px solid rgba(19, 102, 185, 0.18);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .about-card h3 {
+            font-size: 1.15rem;
+            color: var(--primary);
+            margin-bottom: 0.7rem;
+        }
+
+        .about-card p {
+            font-size: 0.93rem;
+            color: #555;
+            line-height: 1.7;
+            font-family: 'Avenir', sans-serif;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4.5rem 5%;
+            background: linear-gradient(135deg, var(--primary-soft) 0%, #ffffff 100%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 20px;
+            text-align: left;
+            transition: all 0.3s;
+            border: 1.5px solid rgba(19,102,185,0.08);
+            box-shadow: 0 8px 26px rgba(0, 0, 0, 0.03);
+            animation: scaleIn 0.6s ease-out backwards;
+        }
+
+        .service-card:nth-child(1) { animation-delay: 0.05s; }
+        .service-card:nth-child(2) { animation-delay: 0.1s; }
+        .service-card:nth-child(3) { animation-delay: 0.15s; }
+        .service-card:nth-child(4) { animation-delay: 0.2s; }
+        .service-card:nth-child(5) { animation-delay: 0.25s; }
+        .service-card:nth-child(6) { animation-delay: 0.3s; }
+        .service-card:nth-child(7) { animation-delay: 0.35s; }
+        .service-card:nth-child(8) { animation-delay: 0.4s; }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.96);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary);
+            box-shadow: 0 18px 48px rgba(19, 102, 185, 0.17);
+        }
+
+        .service-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.7rem;
+            display: inline-block;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .service-tag {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #4a4a4a;
+            margin-bottom: 0.6rem;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 0.4rem;
+            font-family: 'Avenir', sans-serif;
+            font-size: 0.93rem;
+        }
+
+        .service-list {
+            margin: 0.3rem 0 0.6rem;
+            padding-left: 1.1rem;
+            font-size: 0.9rem;
+        }
+
+        .service-list li {
+            margin-bottom: 0.3rem;
+            color: #444;
+        }
+
+        .service-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.32rem;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .service-cta:hover {
+            text-decoration: underline;
+        }
+
+        /* Why Choose Section */
+        .why-choose {
+            padding: 4.5rem 5%;
+            background: #ffffff;
+        }
+
+        .why-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 2.3rem;
+        }
+
+        .why-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.6rem;
+        }
+
+        .why-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.94rem;
+            color: #444;
+        }
+
+        .why-item span {
+            color: #2ecc71;
+            margin-top: 0.07rem;
+        }
+
+        .why-card {
+            background: var(--primary-soft);
+            border-radius: 18px;
+            padding: 1.5rem 1.6rem;
+            border: 1px solid rgba(19, 102, 185, 0.12);
+            font-size: 0.93rem;
+            color: #555;
+            font-family: 'Avenir', sans-serif;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 4.5rem 5%;
+            background: linear-gradient(135deg, var(--primary-soft) 0%, #ffffff 100%);
+        }
+
+        .testimonials-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.7rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 18px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(19, 102, 185, 0.08);
+            font-size: 0.93rem;
+            line-height: 1.7;
+            font-family: 'Avenir', sans-serif;
+        }
+
+        .testimonial-stars {
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+            color: #f1c40f;
+        }
+
+        .testimonial-meta {
+            margin-top: 0.5rem;
+            font-size: 0.84rem;
+            color: #777;
+        }
+
+        .testimonial-note {
+            margin-top: 1.1rem;
+            text-align: center;
+            font-size: 0.88rem;
+            color: #666;
+        }
+
+        /* Steps Section */
+        .steps {
+            padding: 4.5rem 5%;
+            background: #ffffff;
+        }
+
+        .steps-grid {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 2.2rem;
+            align-items: center;
+        }
+
+        .steps-list {
+            list-style: none;
+        }
+
+        .steps-list li {
+            margin-bottom: 0.8rem;
+            padding: 0.8rem 0.9rem;
+            border-radius: 14px;
+            background: #f7f9ff;
+            border: 1px solid rgba(19, 102, 185, 0.08);
+            font-size: 0.94rem;
+            color: #444;
+        }
+
+        .steps-list li::before {
+            content: "✔";
+            margin-right: 0.55rem;
+            color: #2ecc71;
+            font-weight: 600;
+        }
+
+        .steps-side {
+            background: var(--primary);
+            color: white;
+            border-radius: 20px;
+            padding: 1.6rem 1.5rem;
+        }
+
+        .steps-side h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .steps-side p {
+            font-size: 0.94rem;
+            line-height: 1.6;
+            font-family: 'Avenir', sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        .steps-side .btn {
+            background: white;
+            color: var(--primary);
+        }
+
+        .steps-side .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Booking Form Section */
+        .booking {
+            padding: 4.5rem 5%;
+            background: radial-gradient(circle at top, #eaf2ff 0, #ffffff 55%);
+        }
+
+        .booking-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.05fr 1fr;
+            gap: 2.4rem;
+            align-items: flex-start;
+        }
+
+        .booking-info {
+            font-family: 'Avenir', sans-serif;
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .booking-points {
+            margin-top: 0.9rem;
+            padding-left: 1.2rem;
+            font-size: 0.94rem;
+        }
+
+        .booking-points li {
+            margin-bottom: 0.4rem;
+        }
+
+        .booking-badge {
+            display: inline-block;
+            margin-top: 0.8rem;
+            padding: 0.35rem 0.8rem;
+            border-radius: 999px;
+            background: rgba(19,102,185,0.07);
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .booking-form-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.8rem 1.6rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(19, 102, 185, 0.1);
+        }
+
+        .booking-form-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.4rem;
+        }
+
+        .booking-form-sub {
+            font-size: 0.9rem;
+            color: #777;
+            font-family: 'Avenir', sans-serif;
+            margin-bottom: 1.1rem;
+        }
+
+        .booking-form {
+            display: grid;
+            gap: 0.9rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.8rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .form-group label {
+            font-size: 0.86rem;
+            font-weight: 500;
+            color: #444;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.65rem 0.8rem;
+            border-radius: 10px;
+            border: 1px solid #d3ddf0;
+            font-size: 0.9rem;
+            font-family: 'Poppins', sans-serif;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(19,102,185,0.13);
+            background: #f8fbff;
+        }
+
+        .form-group textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .form-check {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.4rem;
+            font-size: 0.8rem;
+            color: #666;
+            font-family: 'Avenir', sans-serif;
+        }
+
+        .form-check input {
+            margin-top: 0.13rem;
+        }
+
+        .booking-form button {
+            margin-top: 0.4rem;
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* Offers Section */
+        .offers {
+            padding: 4rem 5%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            text-align: center;
+        }
+
+        .offers h2 {
+            font-size: 1.9rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .offers p {
+            font-size: 0.96rem;
+            opacity: 0.96;
+            margin-bottom: 1.2rem;
+            font-family: 'Avenir', sans-serif;
+        }
+
+        .offers-badge {
+            display: inline-block;
+            padding: 0.4rem 0.9rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            font-size: 0.86rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Therapist Section */
+        .therapist {
+            padding: 4.5rem 5%;
+            background: #ffffff;
+        }
+
+        .therapist-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 2.3rem;
+            align-items: flex-start;
+        }
+
+        .therapist-text p {
+            color: #555;
+            font-size: 0.94rem;
+            font-family: 'Avenir', sans-serif;
+            line-height: 1.7;
+            margin-bottom: 0.7rem;
+        }
+
+        .therapist-list {
+            margin-top: 0.5rem;
+            padding-left: 1.2rem;
+            font-size: 0.93rem;
+        }
+
+        .therapist-card {
+            background: var(--primary-soft);
+            border-radius: 18px;
+            padding: 1.7rem 1.6rem;
+            border: 1px solid rgba(19, 102, 185, 0.12);
+        }
+
+        .therapist-card h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .therapist-card p {
+            font-size: 0.93rem;
+            color: #555;
+            font-family: 'Avenir', sans-serif;
+        }
+
+        .therapist-tag {
+            display: inline-block;
+            margin-top: 0.7rem;
+            padding: 0.33rem 0.8rem;
+            border-radius: 999px;
+            background: #eaf3ff;
+            color: var(--primary);
+            font-size: 0.82rem;
+            font-weight: 500;
+        }
+
+        .therapist-card .btn {
+            margin-top: 1.1rem;
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* Final CTA Section */
+        .cta-section {
+            padding: 4.5rem 5%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: moveBackground 22s linear infinite;
+        }
+
+        @keyframes moveBackground {
+            from { transform: translate(0, 0); }
+            to { transform: translate(40px, 40px); }
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 2.1rem;
+            margin-bottom: 0.9rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .cta-content p {
+            font-size: 0.98rem;
+            margin-bottom: 1.7rem;
+            opacity: 0.96;
+            font-family: 'Avenir', sans-serif;
+        }
+
+        .cta-button {
+            background: white;
+            color: var(--primary);
+            padding: 0.95rem 2.6rem;
+            border-radius: 999px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 42px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-sub {
+            margin-top: 0.9rem;
+            font-size: 0.9rem;
+            opacity: 0.94;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3.2rem 5% 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.1rem;
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--accent);
+            margin-bottom: 0.9rem;
+            font-size: 1.05rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.8;
+            text-decoration: none;
+            display: block;
+            transition: color 0.3s;
+            font-family: 'Avenir', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.83rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content,
+            .about-content,
+            .why-grid,
+            .steps-grid,
+            .therapist-grid,
+            .booking-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero-location {
+                text-align: center;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .hero {
+                padding-top: 7rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.4rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#home" class="logo">
+            <div class="logo-icon">✨</div>
+            Divine Healing Holistic
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why-choose">Why Choose</a></li>
+            <li><a href="#booking">Book</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    🧩 100% Natural, Non-Surgical Pain Relief
+                </div>
+                <h1>
+                    ✨ Relieve Pain Naturally.<br>
+                    Restore Balance.<br>
+                    <span class="highlight">Reclaim Your Life.</span>
+                </h1>
+                <p>
+                    At Divine Healing, we provide specialized therapies for cervical pain, spondylitis, lumbar pain, knee pain,
+                    carpal tunnel, sciatica and more — no medicine, no surgery required, and 100% result-oriented.
+                </p>
+                <p class="hero-note">
+                    Specialized care available for paralytic patients — home/clinic visits possible.
+                </p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/91YOURNUMBER?text=Hi%20I%20want%20to%20book%20a%20therapy%20session" target="_blank" class="btn btn-primary">
+                        💬 Book a Therapy Session
+                    </a>
+                    <a href="#booking" class="btn btn-secondary">
+                        📝 Fill Booking Form
+                    </a>
+                </div>
+                <p class="hero-location">
+                    📍 First time in Porwal Road, Dhanori, Lohegaon!
+                </p>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card">
+                    <div class="card-icon">🩺</div>
+                    <h3 class="card-title">Pain Relief & Body Alignment</h3>
+                    <p class="card-text">
+                        Divine Healing Holistic Wellness Centre specializes in natural, non-invasive therapies for chronic pain,
+                        spine & joint issues and energy balance. Every treatment is personalized by experienced therapist
+                        <strong>Sarvesh</strong> for effective, long-lasting relief.
+                    </p>
+                    <ul class="card-list">
+                        <li>Cervical, lumbar, knee & joint pain</li>
+                        <li>Sciatica, spondylitis, carpal tunnel</li>
+                        <li>Special care for paralytic patients</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-title">
+            <h2>Holistic Healing for Pain Relief &amp; Body Alignment</h2>
+            <p>Natural, non-invasive therapies designed to heal the root cause — not just hide the pain.</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    Divine Healing specializes in natural, non-invasive therapies for chronic pain, injury recovery
+                    and energy balance. Our focus is to help you move freely, live pain-free and restore your body’s
+                    natural alignment — without depending on painkillers or surgery.
+                </p>
+                <ul class="about-list">
+                    <li>Relieve chronic pain &amp; stiffness without medicine or surgery</li>
+                    <li>Restore posture &amp; skeletal alignment naturally</li>
+                    <li>Rehabilitate injuries and joint issues with focused therapies</li>
+                    <li>Relieve sciatica and nerve-related pain</li>
+                    <li>Provide care &amp; therapy for paralytic patients (home/clinic visits)</li>
+                    <li>Rebalance energy &amp; vitality for overall wellness</li>
+                    <li>Achieve 100% result-oriented healing with systematic sessions</li>
+                </ul>
+                <div class="about-highlight">
+                    All treatments are personalized by experienced therapist <strong>Sarvesh</strong>,
+                    ensuring targeted, effective and lasting pain relief.
+                </div>
+                <div class="about-badge">
+                    🌿 100% Natural | 🩻 Non-Surgical | 🎯 Result-Oriented
+                </div>
+            </div>
+            <div class="about-card">
+                <h3>What We Help With</h3>
+                <p>
+                    ✔ Cervical pain, neck stiffness, frozen shoulder<br>
+                    ✔ Lumbar pain, lower back pain, spinal issues<br>
+                    ✔ Knee pain, arthritis, joint stiffness<br>
+                    ✔ Sciatica, nerve compression, tingling &amp; numbness<br>
+                    ✔ Carpal tunnel &amp; hand/wrist pain<br>
+                    ✔ Post-injury rehabilitation &amp; postural correction<br>
+                    ✔ Customized support for paralytic patients
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Advanced therapies designed to relieve pain, align the body and restore natural movement.</p>
+        </div>
+        <div class="services-grid">
+            <!-- 1. Acupressure -->
+            <div class="service-card">
+                <div class="service-icon">👐</div>
+                <h3>Acupressure Therapy</h3>
+                <p class="service-tag">
+                    Ideal For: Cervical pain, neck stiffness, lumbar pain, sciatica, stress relief
+                </p>
+                <p><strong>Benefits:</strong></p>
+                <ul class="service-list">
+                    <li>Reduces muscle tension naturally</li>
+                    <li>Improves blood circulation &amp; energy flow</li>
+                    <li>Enhances flexibility &amp; reduces fatigue</li>
+                </ul>
+                <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20book%20an%20Acupressure%20therapy%20session" target="_blank" class="service-cta">
+                    💬 Book Acupressure Session
+                </a>
+            </div>
+
+            <!-- 2. Bone Alignment -->
+            <div class="service-card">
+                <div class="service-icon">🦴</div>
+                <h3>Bone Alignment Therapy</h3>
+                <p class="service-tag">
+                    Ideal For: Spondylitis, lumbar pain, spinal misalignment, sciatica
+                </p>
+                <p><strong>Benefits:</strong></p>
+                <ul class="service-list">
+                    <li>Corrects posture &amp; skeletal alignment</li>
+                    <li>Reduces chronic back, neck &amp; joint pain</li>
+                    <li>Improves mobility &amp; balance naturally</li>
+                </ul>
+                <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20book%20a%20Bone%20Alignment%20session" target="_blank" class="service-cta">
+                    💬 Book Bone Alignment Session
+                </a>
+            </div>
+
+            <!-- 3. Physio & Rehab -->
+            <div class="service-card">
+                <div class="service-icon">🏃‍♂️</div>
+                <h3>Physiotherapy &amp; Rehabilitation</h3>
+                <p class="service-tag">
+                    Ideal For: Knee pain, post-injury recovery, joint rehab, sciatica
+                </p>
+                <p><strong>Benefits:</strong></p>
+                <ul class="service-list">
+                    <li>Strengthens muscles &amp; joints naturally</li>
+                    <li>Reduces inflammation &amp; stiffness</li>
+                    <li>Improves mobility &amp; daily functioning</li>
+                    <li>Supports paralytic patients with home/clinic visits</li>
+                </ul>
+                <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20book%20a%20Physiotherapy%20Rehab%20session" target="_blank" class="service-cta">
+                    💬 Book Physio-Rehab Session
+                </a>
+            </div>
+
+            <!-- 4. Auricular -->
+            <div class="service-card">
+                <div class="service-icon">👂</div>
+                <h3>Auricular Therapy (Ear Therapy)</h3>
+                <p class="service-tag">
+                    Ideal For: Pain relief, stress management, sleep issues
+                </p>
+                <p><strong>Benefits:</strong></p>
+                <ul class="service-list">
+                    <li>Stimulates reflex points in the ear for natural pain relief</li>
+                    <li>Promotes relaxation &amp; mental clarity</li>
+                    <li>Helps with musculoskeletal discomfort, including sciatica</li>
+                </ul>
+                <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20book%20Auricular%20Therapy" target="_blank" class="service-cta">
+                    💬 Book Auricular Therapy
+                </a>
+            </div>
+
+            <!-- 5. Magnetic -->
+            <div class="service-card">
+                <div class="service-icon">🧲</div>
+                <h3>Magnetic Therapy</h3>
+                <p class="service-tag">
+                    Ideal For: Chronic pain, arthritis, muscle fatigue, sciatica
+                </p>
+                <p><strong>Benefits:</strong></p>
+                <ul class="service-list">
+                    <li>Reduces inflammation naturally</li>
+                    <li>Improves circulation &amp; oxygen flow</li>
+                    <li>Boosts the body’s natural healing process</li>
+                </ul>
+                <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20book%20Magnetic%20Therapy" target="_blank" class="service-cta">
+                    💬 Book Magnetic Therapy
+                </a>
+            </div>
+
+            <!-- 6. Sujog -->
+            <div class="service-card">
+                <div class="service-icon">🧘‍♂️</div>
+                <h3>Sujog Therapy</h3>
+                <p class="service-tag">
+                    Ideal For: Posture correction, joint stiffness, chronic discomfort
+                </p>
+                <p><strong>Benefits:</strong></p>
+                <ul class="service-list">
+                    <li>Restores body balance naturally</li>
+                    <li>Reduces pain &amp; muscle tension</li>
+                    <li>Enhances flexibility &amp; joint mobility</li>
+                </ul>
+                <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20book%20Sujog%20Therapy" target="_blank" class="service-cta">
+                    💬 Book Sujog Therapy
+                </a>
+            </div>
+
+            <!-- 7. Nadi Parikshan -->
+            <div class="service-card">
+                <div class="service-icon">🫀</div>
+                <h3>Nadi Parikshan (Pulse Diagnosis)</h3>
+                <p class="service-tag">
+                    Ideal For: Personalized treatment planning
+                </p>
+                <p><strong>Benefits:</strong></p>
+                <ul class="service-list">
+                    <li>Detects underlying energy &amp; organ imbalances</li>
+                    <li>Helps create a customized healing plan</li>
+                    <li>Supports preventive wellness naturally</li>
+                </ul>
+                <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20book%20a%20Nadi%20Parikshan%20session" target="_blank" class="service-cta">
+                    💬 Book Nadi Parikshan Session
+                </a>
+            </div>
+
+            <!-- 8. Dry Cupping -->
+            <div class="service-card">
+                <div class="service-icon">🔥</div>
+                <h3>Dry Cupping Therapy (Fire, Ice, Water)</h3>
+                <p class="service-tag">
+                    Ideal For: Deep muscle pain, joint stiffness, chronic inflammation, sciatica
+                </p>
+                <p><strong>Benefits:</strong></p>
+                <ul class="service-list">
+                    <li>Relieves deep tissue tension &amp; pain naturally</li>
+                    <li>Detoxifies the body &amp; improves circulation</li>
+                    <li>Enhances energy flow &amp; relaxation</li>
+                </ul>
+                <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20book%20Dry%20Cupping%20Therapy" target="_blank" class="service-cta">
+                    💬 Book Dry Cupping Therapy
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose -->
+    <section class="why-choose" id="why-choose">
+        <div class="section-title">
+            <h2>Why Choose Divine Healing?</h2>
+            <p>Focused on real, measurable pain relief — not temporary symptom control.</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-list">
+                <div class="why-item">
+                    <span>✔</span>
+                    <p>Experienced therapist <strong>Sarvesh</strong> — specialized in cervical, lumbar, knee, sciatica, spondylitis and joint pain relief.</p>
+                </div>
+                <div class="why-item">
+                    <span>✔</span>
+                    <p>No medicine, no surgery required — 100% natural, non-invasive therapies.</p>
+                </div>
+                <div class="why-item">
+                    <span>✔</span>
+                    <p>Personalized, condition-specific treatment plans for every patient.</p>
+                </div>
+                <div class="why-item">
+                    <span>✔</span>
+                    <p>100% result-oriented pain relief &amp; rehabilitation approach.</p>
+                </div>
+                <div class="why-item">
+                    <span>✔</span>
+                    <p>Special care and visits available for paralytic patients (home/clinic).</p>
+                </div>
+                <div class="why-item">
+                    <span>✔</span>
+                    <p>Combination of ancient wisdom + modern therapeutic techniques.</p>
+                </div>
+                <div class="why-item">
+                    <span>✔</span>
+                    <p>Safe, natural and non-invasive — suitable for long-term healing.</p>
+                </div>
+                <div class="why-item">
+                    <span>✔</span>
+                    <p>First-time available in Porwal Road, Dhanori, Lohegaon region.</p>
+                </div>
+            </div>
+            <div class="why-card">
+                At Divine Healing, every session is designed to improve your movement, reduce your pain and
+                restore your confidence in your own body. We don’t promise magic in one sitting —
+                we promise consistent progress with every visit, backed by proven techniques and genuine care.
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-title">
+            <h2>Client Testimonials</h2>
+            <p>Real stories from people who chose natural healing over long-term medicines.</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                “After bone alignment and acupressure, my sciatica and lumbar pain improved drastically —
+                and I did not need any painkillers. I’m able to sit, walk and work comfortably again.”
+                <div class="testimonial-meta">– Lumbar &amp; Sciatica Patient</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                “Dry cupping therapy relieved my chronic shoulder and neck pain within a few weeks.
+                The stiffness that was there for months is now almost gone.”
+                <div class="testimonial-meta">– Shoulder &amp; Neck Pain Patient</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                “Physio-rehab and magnetic therapy helped my paralytic relative regain mobility naturally.
+                We saw visible improvement in movement and confidence.”
+                <div class="testimonial-meta">– Family Member of Paralytic Patient</div>
+            </div>
+        </div>
+        <p class="testimonial-note">
+            📸 You can add photos or video testimonials here for even stronger trust-building.
+        </p>
+    </section>
+
+    <!-- Steps / How to Book -->
+    <section class="steps" id="steps">
+        <div class="section-title">
+            <h2>How to Book a Session</h2>
+            <p>Simple WhatsApp-based booking — no app, no forms, just direct human support.</p>
+        </div>
+        <div class="steps-grid">
+            <ul class="steps-list">
+                <li>Step 1 — Click on the WhatsApp button.</li>
+                <li>Step 2 — Select your therapy (Acupressure / Bone Alignment / Cupping / etc.).</li>
+                <li>Step 3 — Share your pain, symptoms or medical reports (if available).</li>
+                <li>Step 4 — Get a personalized treatment plan &amp; session recommendation.</li>
+                <li>Step 5 — Start your natural healing journey with scheduled sessions.</li>
+            </ul>
+            <div class="steps-side">
+                <h3>Book in 30 Seconds on WhatsApp</h3>
+                <p>
+                    No long forms. No waiting. Just tap the button, send your details and we’ll guide you on
+                    the best therapy for your condition, timing and number of sittings required.
+                </p>
+                <a href="https://wa.me/91YOURNUMBER?text=Hi%20I%20want%20to%20book%20a%20healing%20session" target="_blank" class="btn">
+                    💬 Book Your Healing Session Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking" id="booking">
+        <div class="section-title">
+            <h2>Book Your Session Online</h2>
+            <p>Fill this quick form and we’ll confirm your appointment on WhatsApp.</p>
+        </div>
+        <div class="booking-grid">
+            <div class="booking-info">
+                <p>
+                    Not sure which therapy is right for you? Share your pain area, symptoms and timing – we’ll suggest
+                    the best treatment plan for your condition and book your slot accordingly.
+                </p>
+                <ul class="booking-points">
+                    <li>⏱ Quick response on WhatsApp after you submit</li>
+                    <li>🧾 You can share reports, X-rays or MRI later on chat</li>
+                    <li>🏠 Home / clinic visit options for eligible patients</li>
+                    <li>👨‍⚕️ Sessions personally handled by therapist Sarvesh</li>
+                </ul>
+                <div class="booking-badge">
+                    🔒 Your details are kept private and used only for appointment & follow-up.
+                </div>
+            </div>
+            <div class="booking-form-card">
+                <div class="booking-form-title">Fill Your Details</div>
+                <div class="booking-form-sub">We’ll reach out on WhatsApp to confirm date &amp; time.</div>
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">WhatsApp Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="e.g. 9876543210" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="painArea">Primary Pain Area *</label>
+                            <input type="text" id="painArea" name="painArea" placeholder="e.g. Cervical, Knee, Lumbar" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="therapy">Preferred Therapy</label>
+                            <select id="therapy" name="therapy">
+                                <option value="">Select (optional)</option>
+                                <option>Acupressure Therapy</option>
+                                <option>Bone Alignment Therapy</option>
+                                <option>Physiotherapy & Rehabilitation</option>
+                                <option>Auricular Therapy</option>
+                                <option>Magnetic Therapy</option>
+                                <option>Sujog Therapy</option>
+                                <option>Nadi Parikshan</option>
+                                <option>Dry Cupping Therapy</option>
+                                <option>Not sure – need guidance</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Describe Your Pain / Condition *</label>
+                        <textarea id="message" name="message" placeholder="Since when, which side, any diagnosis, etc." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="preferredTime">Preferred Day &amp; Time</label>
+                        <input type="text" id="preferredTime" name="preferredTime" placeholder="e.g. Evening after 6 PM, Weekend only">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="consent" required>
+                        <label for="consent">
+                            I agree to be contacted on WhatsApp / phone for appointment confirmation and follow-ups.
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        🚀 Submit &amp; Send on WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers -->
+    <section class="offers">
+        <div class="offers-badge">
+            ✨ Special Introductory Offer
+        </div>
+        <h2>Combo Packages for Faster Relief</h2>
+        <p>
+            Get a <strong>Free Consultation</strong> + <strong>10% OFF</strong> on any therapy session when you
+            book your first package with Divine Healing.
+        </p>
+        <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20know%20about%20combo%20packages%20and%20offers" target="_blank" class="cta-button">
+            💬 Claim Your Offer on WhatsApp
+        </a>
+    </section>
+
+    <!-- Therapist -->
+    <section class="therapist">
+        <div class="section-title">
+            <h2>About the Therapist</h2>
+            <p>Meet Sarvesh — your dedicated pain relief &amp; body alignment specialist.</p>
+        </div>
+        <div class="therapist-grid">
+            <div class="therapist-text">
+                <p>
+                    <strong>Sarvesh</strong> specializes in cervical pain, lumbar pain, knee pain, spondylitis, sciatica,
+                    carpal tunnel and more — using a powerful combination of traditional and modern therapies:
+                </p>
+                <ul class="therapist-list">
+                    <li>Acupressure</li>
+                    <li>Bone Alignment</li>
+                    <li>Physiotherapy &amp; Rehabilitation</li>
+                    <li>Auricular Therapy</li>
+                    <li>Magnetic Therapy</li>
+                    <li>Sujog Therapy</li>
+                    <li>Nadi Parikshan (Pulse Diagnosis)</li>
+                    <li>Dry Cupping (Fire, Ice, Water)</li>
+                </ul>
+                <p>
+                    Every session is focused on your specific condition — not a generic routine. From pain mapping
+                    to alignment correction, Sarvesh works with you step-by-step until your goals are achieved.
+                </p>
+                <p>
+                    ✨ Home or clinic visits are available for paralytic patients, with gentle, progressive rehabilitation plans.
+                </p>
+            </div>
+            <div class="therapist-card">
+                <h3>Your Healing Partner</h3>
+                <p>
+                    “My mission is simple — help you walk, sit, sleep and live without constant pain. We work together,
+                    we track your improvement and we adjust the treatment plan based on how your body responds.”
+                </p>
+                <div class="therapist-tag">
+                    100% Natural • Non-Invasive • Result-Oriented
+                </div>
+                <a href="https://wa.me/91YOURNUMBER?text=I%20want%20to%20book%20a%20session%20with%20Sarvesh" target="_blank" class="btn btn-primary">
+                    💬 Book Your Session with Sarvesh
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section" id="contact">
+        <div class="cta-content">
+            <h2>✨ Reclaim Your Health &amp; Freedom from Pain Naturally ✨</h2>
+            <p>
+                Don’t wait for the pain to become “normal”. Take the first step towards a pain-free, active life today.
+                Natural, non-surgical and result-focused therapies are now available near you.
+            </p>
+            <a href="https://wa.me/91YOURNUMBER?text=Hi%20I%20want%20to%20book%20a%20Divine%20Healing%20session" target="_blank" class="cta-button">
+                💬 Book a Divine Healing Session on WhatsApp
+            </a>
+            <div class="cta-sub">
+                📍 In-person appointments now available at <strong>Porwal Road, Dhanori, Lohegaon</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Divine Healing Holistic Wellness Centre</h3>
+                <p>
+                    Specialized in natural pain relief, body alignment and rehabilitation — with a
+                    focus on cervical, lumbar, knee, joint and sciatica conditions.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#why-choose">Why Choose Us</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#booking">Book a Session</a>
+            </div>
+            <div class="footer-section">
+                <h3>Location</h3>
+                <p>Porwal Road, Dhanori – Lohegaon Region</p>
+                <p>Pune, Maharashtra</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>WhatsApp: <a href="https://wa.me/91YOURNUMBER" target="_blank">Chat on WhatsApp</a></p>
+                <p>Email: info@divinehealingholistic.com</p>
+                <p>Timings: 10:00 AM – 8:00 PM (By Appointment)</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Divine Healing Holistic Wellness Centre. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Reveal animation for cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .testimonial-card, .booking-form-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            observer.observe(el);
+        });
+
+        // Booking form -> WhatsApp redirect
+        const bookingForm = document.getElementById('bookingForm');
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const painArea = document.getElementById('painArea').value.trim();
+                const therapy = document.getElementById('therapy').value;
+                const message = document.getElementById('message').value.trim();
+                const preferredTime = document.getElementById('preferredTime').value.trim();
+
+                const line1 = `New Booking Request - Website`;
+                const line2 = `Name: ${name}`;
+                const line3 = `WhatsApp Number: ${phone}`;
+                const line4 = `Primary Pain Area: ${painArea}`;
+                const line5 = `Preferred Therapy: ${therapy || 'Not specified'}`;
+                const line6 = `Condition Details: ${message}`;
+                const line7 = `Preferred Day/Time: ${preferredTime || 'Not specified'}`;
+
+                const fullMessage = [line1, '', line2, line3, line4, line5, line6, line7].join('\n');
+
+                // Replace with your full WhatsApp number including country code (no +)
+                const clinicNumber = '91YOURNUMBER';
+                const url = `https://wa.me/${clinicNumber}?text=${encodeURIComponent(fullMessage)}`;
+
+                window.open(url, '_blank');
+            });
+        }
+    </script>
+</body>
+</html>

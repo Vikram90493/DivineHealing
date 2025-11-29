@@ -1174,6 +1174,60 @@
     line-height: 1.8;
     margin-bottom: 0.25rem;
 }
+/* -------- MOBILE HEADER + HERO FIX -------- */
+@media (max-width: 768px) {
+
+    /* Nav / Logo */
+    nav {
+        padding: 0.6rem 4%;
+        justify-content: center;           /* center the logo block */
+    }
+
+    .logo {
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .logo-img {
+        height: 34px;                      /* smaller logo on mobile */
+        width: auto;
+    }
+
+    .logo span {
+        font-size: 0.95rem;                /* smaller text */
+        line-height: 1.2;
+        max-width: 150px;                  /* prevents very long line */
+        display: block;
+        text-align: left;
+    }
+
+    /* Hero layout */
+    .hero {
+        padding-top: 6.2rem;               /* reduce top empty space */
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;        /* stack text + image */
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;                   /* smaller big heading */
+        line-height: 1.25;
+    }
+
+    .hero-text p,
+    .hero-note,
+    .hero-location {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+}
 
     </style>
 </head>
@@ -1746,14 +1800,15 @@
             </div>
             <div class="footer-section">
                 <h3>Location</h3>
-                <p>Porwal Road, Dhanori – Lohegaon Region</p>
-                <p>Pune, Maharashtra</p>
+                <p>United Athashri, Beside Nirvana City, Dhanori, </p>
+                <p>Pune, Maharashtra 411047</p>
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p>Phone: 0000-000-000 (update)</p>
+                <p>Phone: 7996992906  (update)</p>
                 <p>Email: info@divinehealingholistic.com</p>
-                <p>Timings: 10:00 AM – 8:00 PM (By Appointment)</p>
+                <p>Timings: 08:00 AM – 1:00 PM (By Appointment)</p>
+                <p>05:00 PM – 9:00 PM </p>
             </div>
         </div>
         <div class="footer-bottom">

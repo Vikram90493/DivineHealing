@@ -472,6 +472,7 @@
             background: linear-gradient(135deg, var(--primary-soft) 0%, #ffffff 100%);
         }
 
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -479,6 +480,22 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+        .service-image {
+    width: 100%;
+    height: 170px;          /* adjust if you want taller/shorter */
+    border-radius: 16px;
+    object-fit: cover;      /* crops nicely, keeps aspect ratio */
+    margin-bottom: 0.8rem;
+    display: block;
+}
+
+/* optional: slightly smaller on mobile */
+@media (max-width: 768px) {
+    .service-image {
+        height: 150px;
+    }
+}
+
 
         .service-card {
             background: white;
@@ -1233,215 +1250,171 @@
     </section>
 
     <!-- Services -->
-    <section class="services" id="services">
-        <div class="section-title">
-            <h2>Our Services</h2>
-            <p>Advanced therapies designed to relieve pain, align the body and restore natural movement.</p>
+<section class="services" id="services">
+    <div class="section-title">
+        <h2>Our Services</h2>
+        <p>Advanced therapies designed to relieve pain, align the body and restore natural movement.</p>
+    </div>
+
+    <div class="services-grid">
+
+        <!-- 1. Acupressure Therapy -->
+        <div class="service-card">
+            <img src="Acupressure .png" alt="Acupressure therapy for pain relief" class="service-image">
+            <h3>Acupressure Therapy</h3>
+            <p class="service-tag">Ideal For: Cervical pain, neck stiffness, lumbar pain, sciatica, stress relief</p>
+            <p><strong>Benefits:</strong></p>
+            <ul class="service-list">
+                <li>Releases muscle tension naturally</li>
+                <li>Boosts circulation & energy flow</li>
+                <li>Improves flexibility & relaxation</li>
+            </ul>
+            <button type="button" class="service-cta" onclick="scrollToBooking()">Book Acupressure Session</button>
         </div>
-        <div class="services-grid">
-            <!-- 1. Acupressure -->
-            <div class="service-card">
-                <div class="service-icon">👐</div>
-                <h3>Acupressure Therapy</h3>
-                <p class="service-tag">
-                    Ideal For: Cervical pain, neck stiffness, lumbar pain, sciatica, stress relief
-                </p>
-                <p><strong>Benefits:</strong></p>
-                <ul class="service-list">
-                    <li>Reduces muscle tension naturally</li>
-                    <li>Improves blood circulation &amp; energy flow</li>
-                    <li>Enhances flexibility &amp; reduces fatigue</li>
-                </ul>
-                <button type="button" class="service-cta" onclick="scrollToBooking()">
-                    💬 Book Acupressure Session
-                </button>
-            </div>
 
-            <!-- 2. Bone Alignment -->
-            <div class="service-card">
-                <div class="service-icon">🦴</div>
-                <h3>Bone Alignment Therapy</h3>
-                <p class="service-tag">
-                    Ideal For: Spondylitis, lumbar pain, spinal misalignment, sciatica
-                </p>
-                <p><strong>Benefits:</strong></p>
-                <ul class="service-list">
-                    <li>Corrects posture &amp; skeletal alignment</li>
-                    <li>Reduces chronic back, neck &amp; joint pain</li>
-                    <li>Improves mobility &amp; balance naturally</li>
-                </ul>
-                <button type="button" class="service-cta" onclick="scrollToBooking()">
-                    💬 Book Bone Alignment Session
-                </button>
-            </div>
-
-            <!-- 3. Physio & Rehab -->
-            <div class="service-card">
-                <div class="service-icon">🏃‍♂️</div>
-                <h3>Physiotherapy &amp; Rehabilitation</h3>
-                <p class="service-tag">
-                    Ideal For: Knee pain, post-injury recovery, joint rehab, sciatica
-                </p>
-                <p><strong>Benefits:</strong></p>
-                <ul class="service-list">
-                    <li>Strengthens muscles &amp; joints naturally</li>
-                    <li>Reduces inflammation &amp; stiffness</li>
-                    <li>Improves mobility &amp; daily functioning</li>
-                    <li>Supports paralytic patients with home/clinic visits</li>
-                </ul>
-                <button type="button" class="service-cta" onclick="scrollToBooking()">
-                    💬 Book Physio-Rehab Session
-                </button>
-            </div>
-
-            <!-- 4. Auricular -->
-            <div class="service-card">
-                <div class="service-icon">👂</div>
-                <h3>Auricular Therapy (Ear Therapy)</h3>
-                <p class="service-tag">
-                    Ideal For: Pain relief, stress management, sleep issues
-                </p>
-                <p><strong>Benefits:</strong></p>
-                <ul class="service-list">
-                    <li>Stimulates reflex points in the ear for natural pain relief</li>
-                    <li>Promotes relaxation &amp; mental clarity</li>
-                    <li>Helps with musculoskeletal discomfort, including sciatica</li>
-                </ul>
-                <button type="button" class="service-cta" onclick="scrollToBooking()">
-                    💬 Book Auricular Therapy
-                </button>
-            </div>
-
-            <!-- 5. Magnetic -->
-            <div class="service-card">
-                <div class="service-icon">🧲</div>
-                <h3>Magnetic Therapy</h3>
-                <p class="service-tag">
-                    Ideal For: Chronic pain, arthritis, muscle fatigue, sciatica
-                </p>
-                <p><strong>Benefits:</strong></p>
-                <ul class="service-list">
-                    <li>Reduces inflammation naturally</li>
-                    <li>Improves circulation &amp; oxygen flow</li>
-                    <li>Boosts the body’s natural healing process</li>
-                </ul>
-                <button type="button" class="service-cta" onclick="scrollToBooking()">
-                    💬 Book Magnetic Therapy
-                </button>
-            </div>
-
-            <!-- 6. Sujog -->
-            <div class="service-card">
-                <div class="service-icon">🧘‍♂️</div>
-                <h3>Sujog Therapy</h3>
-                <p class="service-tag">
-                    Ideal For: Posture correction, joint stiffness, chronic discomfort
-                </p>
-                <p><strong>Benefits:</strong></p>
-                <ul class="service-list">
-                    <li>Restores body balance naturally</li>
-                    <li>Reduces pain &amp; muscle tension</li>
-                    <li>Enhances flexibility &amp; joint mobility</li>
-                </ul>
-                <button type="button" class="service-cta" onclick="scrollToBooking()">
-                    💬 Book Sujog Therapy
-                </button>
-            </div>
-
-            <!-- 7. Nadi Parikshan -->
-            <div class="service-card">
-                <div class="service-icon">🫀</div>
-                <h3>Nadi Parikshan (Pulse Diagnosis)</h3>
-                <p class="service-tag">
-                    Ideal For: Personalized treatment planning
-                </p>
-                <p><strong>Benefits:</strong></p>
-                <ul class="service-list">
-                    <li>Detects underlying energy &amp; organ imbalances</li>
-                    <li>Helps create a customized healing plan</li>
-                    <li>Supports preventive wellness naturally</li>
-                </ul>
-                <button type="button" class="service-cta" onclick="scrollToBooking()">
-                    💬 Book Nadi Parikshan Session
-                </button>
-            </div>
-
-            <!-- 8. Dry Cupping -->
-            <div class="service-card">
-                <div class="service-icon">🔥</div>
-                <h3>Dry Cupping Therapy (Fire, Ice, Water)</h3>
-                <p class="service-tag">
-                    Ideal For: Deep muscle pain, joint stiffness, chronic inflammation, sciatica
-                </p>
-                <p><strong>Benefits:</strong></p>
-                <ul class="service-list">
-                    <li>Relieves deep tissue tension &amp; pain naturally</li>
-                    <li>Detoxifies the body &amp; improves circulation</li>
-                    <li>Enhances energy flow &amp; relaxation</li>
-                </ul>
-                <button type="button" class="service-cta" onclick="scrollToBooking()">
-                    💬 Book Dry Cupping Therapy
-                </button>
-            </div>
-
-            <!-- 9. Kinesiology Therapy -->
-            <div class="service-card">
-                <div class="service-icon">🦵</div>
-                <h3>Kinesiology Therapy</h3>
-                <p class="service-tag">
-                    Ideal For: Mobility issues, chronic tightness, emotional stress, balance &amp; posture problems
-                </p>
-                <p><strong>Benefits:</strong></p>
-                <ul class="service-list">
-                    <li>Identifies hidden causes of pain</li>
-                    <li>Corrects muscle activation patterns</li>
-                    <li>Aligns emotional &amp; physical energy</li>
-                    <li>Improves movement &amp; flexibility</li>
-                </ul>
-                <button type="button" class="service-cta" onclick="scrollToBooking()">
-                    💬 Book Kinesiology Session
-                </button>
-            </div>
-
-            <!-- 10. Leech Therapy -->
-            <div class="service-card">
-                <div class="service-icon">🩸</div>
-                <h3>Leech Therapy (Jalaukavacharan)</h3>
-                <p class="service-tag">
-                    Ideal For: Varicose veins, arthritis &amp; joint inflammation, diabetic wounds, sciatica &amp; swelling
-                </p>
-                <p><strong>Benefits:</strong></p>
-                <ul class="service-list">
-                    <li>Removes toxins &amp; infected blood</li>
-                    <li>Reduces pain &amp; inflammation</li>
-                    <li>Improves microcirculation</li>
-                    <li>Helps speed up tissue healing</li>
-                </ul>
-                <button type="button" class="service-cta" onclick="scrollToBooking()">
-                    💬 Book Leech Therapy
-                </button>
-            </div>
-
-            <!-- 11. Agni Karma Therapy -->
-            <div class="service-card">
-                <div class="service-icon">♨️</div>
-                <h3>Agni Karma Therapy (Thermal Healing)</h3>
-                <p class="service-tag">
-                    Ideal For: Frozen shoulder, knee pain, tennis elbow, plantar fasciitis
-                </p>
-                <p><strong>Benefits:</strong></p>
-                <ul class="service-list">
-                    <li>Quick pain reduction</li>
-                    <li>Opens blocked energy channels</li>
-                    <li>Reduces stiffness in targeted areas</li>
-                    <li>Supports long-lasting pain relief</li>
-                </ul>
-                <button type="button" class="service-cta" onclick="scrollToBooking()">
-                    💬 Book Agni Karma Session
-                </button>
-            </div>
+        <!-- 2. Bone Alignment Therapy -->
+        <div class="service-card">
+            <img src="Bone.png" alt="Bone alignment therapy for spine posture correction" class="service-image">
+            <h3>Bone Alignment Therapy</h3>
+            <p class="service-tag">Ideal For: Spondylitis, lumbar pain, spinal misalignment, sciatica</p>
+            <p><strong>Benefits:</strong></p>
+            <ul class="service-list">
+                <li>Corrects posture & skeletal structure</li>
+                <li>Relieves joint & nerve pressure</li>
+                <li>Improves mobility & balance</li>
+            </ul>
+            <button type="button" class="service-cta" onclick="scrollToBooking()">Book Bone Alignment Session</button>
         </div>
-    </section>
+
+        <!-- 3. Physiotherapy & Rehab -->
+        <div class="service-card">
+            <img src="Physio-rehab.png" alt="Physiotherapy and rehabilitation for injury recovery" class="service-image">
+            <h3>Physiotherapy & Rehabilitation</h3>
+            <p class="service-tag">Ideal For: Knee pain, injury recovery, joint rehab, sciatica</p>
+            <p><strong>Benefits:</strong></p>
+            <ul class="service-list">
+                <li>Strengthens weak muscles</li>
+                <li>Improves posture & function</li>
+                <li>Reduces stiffness & chronic pain</li>
+            </ul>
+            <button type="button" class="service-cta" onclick="scrollToBooking()">Book Physio Session</button>
+        </div>
+
+        <!-- 4. Auricular Therapy -->
+        <div class="service-card">
+            <img src="Auricular.png" alt="Auricular ear therapy for anxiety and pain relief" class="service-image">
+            <h3>Auricular Therapy (Ear Therapy)</h3>
+            <p class="service-tag">Ideal For: Stress, sleep issues, musculoskeletal pain</p>
+            <p><strong>Benefits:</strong></p>
+            <ul class="service-list">
+                <li>Stimulates reflex points for healing</li>
+                <li>Improves relaxation & sleep</li>
+                <li>Helps nerve-related pain</li>
+            </ul>
+            <button type="button" class="service-cta" onclick="scrollToBooking()">Book Auricular Therapy</button>
+        </div>
+
+        <!-- 5. Magnetic Therapy -->
+        <div class="service-card">
+            <img src="Magnetic.png" alt="Magnetic therapy for inflammation pain reduction" class="service-image">
+            <h3>Magnetic Therapy</h3>
+            <p class="service-tag">Ideal For: Arthritis, chronic pain, muscle fatigue</p>
+            <p><strong>Benefits:</strong></p>
+            <ul class="service-list">
+                <li>Reduces inflammation naturally</li>
+                <li>Boosts oxygen & blood flow</li>
+                <li>Speeds up natural healing</li>
+            </ul>
+            <button type="button" class="service-cta" onclick="scrollToBooking()">Book Magnetic Therapy</button>
+        </div>
+
+        <!-- 6. Sujog Therapy -->
+        <div class="service-card">
+            <img src="Sujog.png" alt="Sujog therapy for body balancing" class="service-image">
+            <h3>Sujog Therapy</h3>
+            <p class="service-tag">Ideal For: Posture correction, joint stiffness</p>
+            <p><strong>Benefits:</strong></p>
+            <ul class="service-list">
+                <li>Balances energy pathways</li>
+                <li>Improves joint function</li>
+                <li>Reduces muscular discomfort</li>
+            </ul>
+            <button type="button" class="service-cta" onclick="scrollToBooking()">Book Sujog Therapy</button>
+        </div>
+
+        <!-- 7. Nadi Parikshan -->
+        <div class="service-card">
+            <img src="Nadi Parikshan.png" alt="Nadi parikshan pulse diagnosis" class="service-image">
+            <h3>Nadi Parikshan (Pulse Diagnosis)</h3>
+            <p class="service-tag">Ideal For: Personalized treatment planning</p>
+            <p><strong>Benefits:</strong></p>
+            <ul class="service-list">
+                <li>Identifies internal imbalance</li>
+                <li>Guides right therapy & healing path</li>
+                <li>Helps preventive care</li>
+            </ul>
+            <button type="button" class="service-cta" onclick="scrollToBooking()">Book Nadi Parikshan</button>
+        </div>
+
+        <!-- 8. Dry Cupping -->
+        <div class="service-card">
+            <img src="Dry Cupping.png" alt="Dry cupping therapy for deep tissue pain relief" class="service-image">
+            <h3>Dry Cupping Therapy</h3>
+            <p class="service-tag">Ideal For: Muscle knots, sciatica, inflammation</p>
+            <p><strong>Benefits:</strong></p>
+            <ul class="service-list">
+                <li>Releases deep tissue tension</li>
+                <li>Detoxification & circulation boost</li>
+                <li>Reduces chronic stiffness</li>
+            </ul>
+            <button type="button" class="service-cta" onclick="scrollToBooking()">Book Cupping Session</button>
+        </div>
+
+        <!-- 9. Kinesiology Therapy -->
+        <div class="service-card">
+            <img src="Kinesiology Therapy.png" alt="Kinesiology therapy for mobility & posture improvement" class="service-image">
+            <h3>Kinesiology Therapy</h3>
+            <p class="service-tag">Ideal For: Mobility issues, emotional stress, posture</p>
+            <p><strong>Benefits:</strong></p>
+            <ul class="service-list">
+                <li>Corrects muscle activation</li>
+                <li>Improves movement & flexibility</li>
+                <li>Aligns emotional + physical energy</li>
+            </ul>
+            <button type="button" class="service-cta" onclick="scrollToBooking()">Book Kinesiology Session</button>
+        </div>
+
+        <!-- 10. Leech Therapy -->
+        <div class="service-card">
+            <img src="Leech .png" alt="Leech therapy for arthritis and diabetic wound healing" class="service-image">
+            <h3>Leech Therapy (Jalaukavacharan)</h3>
+            <p class="service-tag">Ideal For: Varicose veins, inflammation, diabetic wounds</p>
+            <p><strong>Benefits:</strong></p>
+            <ul class="service-list">
+                <li>Removes toxins & bad blood</li>
+                <li>Relieves swelling & pain</li>
+                <li>Improves microcirculation</li>
+            </ul>
+            <button type="button" class="service-cta" onclick="scrollToBooking()">Book Leech Therapy</button>
+        </div>
+
+        <!-- 11. Agni Karma Therapy -->
+        <div class="service-card">
+            <img src="Agnikarma.png" alt="Agni karma thermal healing therapy" class="service-image">
+            <h3>Agni Karma Therapy</h3>
+            <p class="service-tag">Ideal For: Frozen shoulder, knee pain, plantar fasciitis</p>
+            <p><strong>Benefits:</strong></p>
+            <ul class="service-list">
+                <li>Quick pain relief & stiffness reduction</li>
+                <li>Unblocks energy channels</li>
+                <li>Long-lasting improvement</li>
+            </ul>
+            <button type="button" class="service-cta" onclick="scrollToBooking()">Book Agni Karma Session</button>
+        </div>
+
+    </div>
+</section>
+
 
     <!-- Why Choose -->
     <section class="why-choose" id="why-choose">
